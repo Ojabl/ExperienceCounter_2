@@ -1,0 +1,51 @@
+﻿<Window x:Class="ExperienceCounter_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExperienceCounter_2"
+        mc:Ignorable="d"
+        Title="Experience Counter" Height="500" Width="300" Style="{StaticResource WindowStyle}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="116*"/>
+        </Grid.RowDefinitions>
+        
+        <Menu>
+            <MenuItem Header="Options">
+                <MenuItem Header="Dark mode" Name="colorModeCheckbox" IsCheckable="True" 
+                          Checked="colorModeCheckbox_Checked" Unchecked="colorModeCheckbox_Unchecked"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Reset" Click="reset_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        </Menu>
+
+        <TextBlock Grid.Row="1" Style="{StaticResource backgroundText}" HorizontalAlignment="Center" Margin="0,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="22"><Run Language="pl-pl" Text="Exp:"/></TextBlock>
+        <TextBox x:Name="experienceText" Text="" HorizontalAlignment="Center" Margin="0,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" FontSize="36" BorderThickness="0" TextAlignment="Center" Grid.Row="1" Height="48"/>
+
+        <TextBlock HorizontalAlignment="Left" Style="{StaticResource backgroundText}" Margin="18,146,0,0" TextWrapping="Wrap" Text="Task:" VerticalAlignment="Top" Grid.Row="1" Height="16" Width="25"/>
+        <Button x:Name="veryEasyButton" Content="Very Easy" HorizontalAlignment="Left" Margin="29,181,0,0" VerticalAlignment="Top" Width="60" Click="veryEasyButton_Click" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="veryEasyTextBox" BorderThickness="0" HorizontalAlignment="Left" Margin="29,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" Height="20" TextAlignment="Center" Grid.Row="1"/>
+        <Button x:Name="easyButton" Content="Easy" HorizontalAlignment="Left" Margin="109,181,0,0" VerticalAlignment="Top" Click="easyButton_Click" Width="60" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="easyTextBox" BorderThickness="0" HorizontalAlignment="Left" Margin="109,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" Height="20" TextAlignment="Center" Grid.Row="1"/>
+        <Button x:Name="mediumButton" Content="Medium" HorizontalAlignment="Left" Margin="187,181,0,0" VerticalAlignment="Top" Click="mediumButton_Click" Width="60" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="mediumTextBox" BorderThickness="0" HorizontalAlignment="Left" Margin="187,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" Height="20" TextAlignment="Center" Grid.Row="1"/>
+        <Button x:Name="hardButton" Content="Hard" HorizontalAlignment="Left" Margin="29,250,0,0" VerticalAlignment="Top" Width="60" Click="hardButton_Click" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="hardTextBox" BorderThickness="0" HorizontalAlignment="Left" Margin="29,283,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" Height="20" TextAlignment="Center" Grid.Row="1"/>
+        <Button x:Name="veryHardButton" Content="Very Hard" HorizontalAlignment="Left" Margin="109,250,0,0" VerticalAlignment="Top" Width="60" Click="veryHardButton_Click" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="veryHardTextBox" BorderThickness="0" HorizontalAlignment="Left" Margin="109,283,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" Height="20" TextAlignment="Center" Grid.Row="1"/>
+        <Button x:Name="expertButton" Content="Expert" HorizontalAlignment="Left" Margin="187,250,0,0" VerticalAlignment="Top" Click="expertButton_Click" Width="60" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="expertTextBox" BorderThickness="0" HorizontalAlignment="Left" Margin="187,283,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" Height="20" TextAlignment="Center" Grid.Row="1"/>
+
+
+        <TextBlock HorizontalAlignment="Left" Style="{StaticResource backgroundText}" Margin="18,332,0,0" TextWrapping="Wrap" Text="Project:" VerticalAlignment="Top" Grid.Row="1" Height="16" Width="39"/>
+        <Button x:Name="shortProjectButton" Content="Short" HorizontalAlignment="Left" Margin="30,366,0,0" VerticalAlignment="Top" Width="60" Click="shortProjectButton_Click" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="shortProjectTextBox" BorderThickness="0" HorizontalAlignment="Left" Margin="29,404,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" Height="20" TextAlignment="Center" Grid.Row="1"/>
+        <Button x:Name="mediumProjectButton" Content="Medium" HorizontalAlignment="Left" Margin="109,366,0,0" VerticalAlignment="Top" Width="60" Click="mediumProjectButton_Click" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="mediumProjectTextBox" BorderThickness="0" HorizontalAlignment="Left" Margin="109,404,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" Height="20" TextAlignment="Center" Grid.Row="1"/>
+        <Button x:Name="longProjectButton" Content="Long" HorizontalAlignment="Left" Margin="187,366,0,0" VerticalAlignment="Top" Width="60" Click="longProjectButton_Click" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="longProjectTextBox" BorderThickness="0" HorizontalAlignment="Left" Margin="187,404,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" Height="20" TextAlignment="Center" Grid.Row="1"/>
+
+    </Grid>
+
+</Window>
