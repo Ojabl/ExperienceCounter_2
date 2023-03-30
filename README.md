@@ -1,7 +1,5 @@
 # ExperienceCounter_2
 
-Second version of simple WPF app used to calculate "experience points" for completing programming tasks.
-
 App has 6 different difficulty levels for each completed task and 3 levels for projects based on their length,
 also features dark mode and reset option.
 
